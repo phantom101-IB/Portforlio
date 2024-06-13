@@ -26,7 +26,7 @@ app.use(notFound)
 const PORT = process.env.PORT || 5000
 const start = async () => {
     try {
-        // await connectDB(process.env.MONGO_URL)
+        await connectDB(process.env.MONGO_URL)
         app.listen(PORT, () => {
             console.log(`Port ${PORT} is live...`)
         })
