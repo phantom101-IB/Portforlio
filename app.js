@@ -19,9 +19,9 @@ app.use(cors())
 
 app.use("/api/v1/auth", route)
 app.get("/", (req, res) => {
-    res.send(
-        "This API is for post routes only(Creating Users and Logging In), cannot access a post route on a get Request"
-    )
+    res.json({
+        msg: "This API is for post routes only(Creating Users and Logging In), cannot access a post route on a get Request",
+    })
 })
 // use middleware
 app.use(errHandler)
